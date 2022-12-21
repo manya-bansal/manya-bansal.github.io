@@ -13,8 +13,7 @@ I took a computer science class and have become a permanent resident of the syst
 I am generally interested 
 in building designing extensible, productive and composable languages (and tools!) for heterogeneous systems. 
 At Stanford, I have been fortunate to work with [Fredrik Kjolstad](http://fredrikbk.com/) and [Dawson Engler](https://web.stanford.edu/~engler/).
-
-PS: This site is currently under construction!"""
+"""
 authorlocation = "authorlocation"
 cover = "images/cover.png"
 ## save the image you want to use as background picture in directory "./static/images"author = "author name"(delete this line when editing)
