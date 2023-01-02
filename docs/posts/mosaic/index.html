@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <link rel="preload" href="https://manya-bansal.github.io/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="https://manya-bansal.github.io/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="https://manya-bansal.github.io/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="https://manya-bansal.github.io/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+  <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Mosaic: An Interoperable Compiler for Tensor Algebra | Manya Bansal</title>
+  <link rel = 'canonical' href = 'https://manya-bansal.github.io/posts/mosaic/'>
+  <meta name="description" content="I am an undergraduate student studying Mathematics at Stanford University. Somewhere along the way, 
+I took a computer science class and became a permanent resident of the systems community. 
+
+I am generally interested 
+in designing extensible and productive languages (and tools!) for heterogeneous systems. 
+At Stanford, I have been fortunate to work with [Fredrik Kjolstad](http://fredrikbk.com/) and [Dawson Engler](https://web.stanford.edu/~engler/).
+
+">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Mosaic: An Interoperable Compiler for Tensor Algebra" />
+<meta property="og:description" content="We introduce Mosaic, a sparse tensor algebra compiler that can bind tensor (sub-)expressions to external functions of other tensor algebra libraries or compilers. Users can extend Mosaic by adding new functions and can bind a sub-computation to a function using a scheduling API. Mosaic substitutes the bound (sub-)expressions with the specified function call and automatically fills in the rest of the unbound code using a default code generator. Mosaic also has a search system that can automatically map an expression to a set of registered external functions." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://manya-bansal.github.io/posts/mosaic/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2000-01-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2000-01-02T00:00:00+00:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Mosaic: An Interoperable Compiler for Tensor Algebra"/>
+<meta name="twitter:description" content="We introduce Mosaic, a sparse tensor algebra compiler that can bind tensor (sub-)expressions to external functions of other tensor algebra libraries or compilers. Users can extend Mosaic by adding new functions and can bind a sub-computation to a function using a scheduling API. Mosaic substitutes the bound (sub-)expressions with the specified function call and automatically fills in the rest of the unbound code using a default code generator. Mosaic also has a search system that can automatically map an expression to a set of registered external functions."/>
+
+  
+  
+  
+  <link rel="stylesheet" href="https://manya-bansal.github.io/css/styles.94f653e9e151e28067a7c5dbbc4600cbd5a3c721e79faaf971e523c40f3b249b8e4f20bb57810dfffa8d559ca5c140fd56eb4cd9c0853113ad08e66afdb08bdd.css" integrity="sha512-lPZT6eFR4oBnp8XbvEYAy9WjxyHnn6r5ceUjxA87JJuOTyC7V4EN//qNVZylwUD9VutM2cCFMROtCOZq/bCL3Q=="> 
+
+  
+  
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://manya-bansal.github.io/images/favicon.ico" />
+
+  
+  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://manya-bansal.github.io/posts/kernel-tools/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fmanya-bansal.github.io%2fposts%2fmosaic%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fmanya-bansal.github.io%2fposts%2fmosaic%2f&text=Mosaic%3a%20An%20Interoperable%20Compiler%20for%20Tensor%20Algebra" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fmanya-bansal.github.io%2fposts%2fmosaic%2f&title=Mosaic%3a%20An%20Interoperable%20Compiler%20for%20Tensor%20Algebra" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fmanya-bansal.github.io%2fposts%2fmosaic%2f&is_video=false&description=Mosaic%3a%20An%20Interoperable%20Compiler%20for%20Tensor%20Algebra" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Mosaic%3a%20An%20Interoperable%20Compiler%20for%20Tensor%20Algebra&body=Check out this article: https%3a%2f%2fmanya-bansal.github.io%2fposts%2fmosaic%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fmanya-bansal.github.io%2fposts%2fmosaic%2f&title=Mosaic%3a%20An%20Interoperable%20Compiler%20for%20Tensor%20Algebra" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fmanya-bansal.github.io%2fposts%2fmosaic%2f&title=Mosaic%3a%20An%20Interoperable%20Compiler%20for%20Tensor%20Algebra" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fmanya-bansal.github.io%2fposts%2fmosaic%2f&name=Mosaic%3a%20An%20Interoperable%20Compiler%20for%20Tensor%20Algebra&description=We%20introduce%20Mosaic%2c%20a%20sparse%20tensor%20algebra%20compiler%20that%20can%20bind%20tensor%20%28sub-%29expressions%20to%20external%20functions%20of%20other%20tensor%20algebra%20libraries%20or%20compilers.%20Users%20can%20extend%20Mosaic%20by%20adding%20new%20functions%20and%20can%20bind%20a%20sub-computation%20to%20a%20function%20using%20a%20scheduling%20API.%20Mosaic%20substitutes%20the%20bound%20%28sub-%29expressions%20with%20the%20specified%20function%20call%20and%20automatically%20fills%20in%20the%20rest%20of%20the%20unbound%20code%20using%20a%20default%20code%20generator.%20Mosaic%20also%20has%20a%20search%20system%20that%20can%20automatically%20map%20an%20expression%20to%20a%20set%20of%20registered%20external%20functions." aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fmanya-bansal.github.io%2fposts%2fmosaic%2f&t=Mosaic%3a%20An%20Interoperable%20Compiler%20for%20Tensor%20Algebra" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    
+    <div id="toc">
+      <nav id="TableOfContents"></nav>
+    </div>
+    
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Mosaic: An Interoperable Compiler for Tensor Algebra
+      </h1>
+      <div class="meta">
+        <span>
+          
+            Manya Bansal,
+          
+            Olivia Hsu,
+          
+            Kunle Olukotun,
+          
+            Fredrik Kjolstad.
+          
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+
+  
+    
+    <div class="content" itemprop="articleBody">
+      <p>We introduce Mosaic, a sparse tensor algebra compiler that can bind tensor (sub-)expressions to external
+functions of other tensor algebra libraries or compilers. Users can extend Mosaic by adding new functions and
+can bind a sub-computation to a function using a scheduling API. Mosaic substitutes the bound
+(sub-)expressions with the specified function call and automatically fills in the rest of the unbound code using
+a default code generator. Mosaic also has a search system that can automatically map an expression to a set
+of registered external functions. Both the explicit binding and automatic search are verified by Mosaic. We
+demonstrate the benefits of our approach by showing that calling hand-written CPU and specialized hardware
+functions can provide speedup of up to 206$\times$ and 173$\times$, respectively, over a homogeneous compiler. Mosaic’s
+external function interface is simple and general. Currently, 38 external functions have been added to Mosaic,
+with each addition averaging 20 lines of C++ code.</p>
+<p><em>Email me (<a href="mailto:manya227@stanford.edu">manya227@stanford.edu</a>) for the pre-print.</em></p>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+      </ul>
+    </div>
+
+    
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents"></nav>
+    </div>
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fmanya-bansal.github.io%2fposts%2fmosaic%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fmanya-bansal.github.io%2fposts%2fmosaic%2f&text=Mosaic%3a%20An%20Interoperable%20Compiler%20for%20Tensor%20Algebra" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fmanya-bansal.github.io%2fposts%2fmosaic%2f&title=Mosaic%3a%20An%20Interoperable%20Compiler%20for%20Tensor%20Algebra" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fmanya-bansal.github.io%2fposts%2fmosaic%2f&is_video=false&description=Mosaic%3a%20An%20Interoperable%20Compiler%20for%20Tensor%20Algebra" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Mosaic%3a%20An%20Interoperable%20Compiler%20for%20Tensor%20Algebra&body=Check out this article: https%3a%2f%2fmanya-bansal.github.io%2fposts%2fmosaic%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fmanya-bansal.github.io%2fposts%2fmosaic%2f&title=Mosaic%3a%20An%20Interoperable%20Compiler%20for%20Tensor%20Algebra" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fmanya-bansal.github.io%2fposts%2fmosaic%2f&title=Mosaic%3a%20An%20Interoperable%20Compiler%20for%20Tensor%20Algebra" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fmanya-bansal.github.io%2fposts%2fmosaic%2f&name=Mosaic%3a%20An%20Interoperable%20Compiler%20for%20Tensor%20Algebra&description=We%20introduce%20Mosaic%2c%20a%20sparse%20tensor%20algebra%20compiler%20that%20can%20bind%20tensor%20%28sub-%29expressions%20to%20external%20functions%20of%20other%20tensor%20algebra%20libraries%20or%20compilers.%20Users%20can%20extend%20Mosaic%20by%20adding%20new%20functions%20and%20can%20bind%20a%20sub-computation%20to%20a%20function%20using%20a%20scheduling%20API.%20Mosaic%20substitutes%20the%20bound%20%28sub-%29expressions%20with%20the%20specified%20function%20call%20and%20automatically%20fills%20in%20the%20rest%20of%20the%20unbound%20code%20using%20a%20default%20code%20generator.%20Mosaic%20also%20has%20a%20search%20system%20that%20can%20automatically%20map%20an%20expression%20to%20a%20set%20of%20registered%20external%20functions." aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fmanya-bansal.github.io%2fposts%2fmosaic%2f&t=Mosaic%3a%20An%20Interoperable%20Compiler%20for%20Tensor%20Algebra" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2023  Manya Bansal 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=https://manya-bansal.github.io/lib/font-awesome/css/all.min.css>
+<script src=https://manya-bansal.github.io/lib/jquery/jquery.min.js></script>
+<script src=https://manya-bansal.github.io/js/main.js></script>
+
+<script src=https://manya-bansal.github.io/js/code-copy.js></script>
+
+
+
+  
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+</html>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Manya Bansal</title>
-    <link>https://manya-bansal.github.io/</link>
-    <description>Recent content on Manya Bansal</description>
+    <title>Posts on Manya Bansal</title>
+    <link>https://manya-bansal.github.io/posts/</link>
+    <description>Recent content in Posts on Manya Bansal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Jan 2000 00:00:00 +0000</lastBuildDate><atom:link href="https://manya-bansal.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jan 2000 00:00:00 +0000</lastBuildDate><atom:link href="https://manya-bansal.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mosaic: An Interoperable Compiler for Tensor Algebra</title>
       <link>https://manya-bansal.github.io/posts/mosaic/</link>
