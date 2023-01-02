@@ -11,7 +11,7 @@ description = """I am an undergraduate student studying Mathematics at Stanford 
 I took a computer science class and have become a permanent resident of the systems community. 
 
 I am generally interested 
-in building designing extensible, productive and composable languages (and tools!) for heterogeneous systems. 
+in designing extensible and productive languages (and tools!) for heterogeneous systems. 
 At Stanford, I have been fortunate to work with [Fredrik Kjolstad](http://fredrikbk.com/) and [Dawson Engler](https://web.stanford.edu/~engler/).
 """
 authorlocation = "authorlocation"
