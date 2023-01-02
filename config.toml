@@ -8,40 +8,22 @@ paginate = 2
 canonifyurls = true
 [params]
 description = """I am an undergraduate student studying Mathematics at Stanford University. Somewhere along the way, 
-I took a computer science class and have become a permanent resident of the systems community. 
+I took a computer science class and became a permanent resident of the systems community. 
 
 I am generally interested 
 in designing extensible and productive languages (and tools!) for heterogeneous systems. 
 At Stanford, I have been fortunate to work with [Fredrik Kjolstad](http://fredrikbk.com/) and [Dawson Engler](https://web.stanford.edu/~engler/).
+
 """
 authorlocation = "authorlocation"
 cover = "images/cover.png"
-## save the image you want to use as background picture in directory "./static/images"author = "author name"(delete this line when editing)
-logo = "images/logo.png"
-## save the image you want to use as website logo in directory "./static/images"(delete this line when editing)
+logo = "images/raspberry-pi.png"
 email = "manya227@stanford.edu"
 hideHUGOSupport = false
-mainSectionTitle = " "
-showAllPostsOnHomePage = false
-[[menu.main]]  # here are the buttons on the menu
-name = "Home" # Button will display as "Home"
-weight = 100 # the weight decides the position of the button (higher or lower)
-identifier = "home"
-pre = "<br />"
-url = "/"
-# [[menu.main]]
-# name = "Research"
-# weight = 0
-# identifier = "Research" # this button will refer to a markdown file named "contact" in the content folder
-# pre = "<br />"
-# url = "/research"
-
-# [[menu.main]]
-# name = "Blog"
-# identifier = "blog" # this page will refer to a markdown file named "blog" in the content folder
-# pre = "<br />"
-# url = "/post"
-# weight = 40
+mainSectionTitle = "Research"
+showAllPostsOnHomePage = true
+showAllPostsArchive = true
+tagsOverview = true # show tags overview by default.
 
 [sitemap]
 ChangeFreq = ""
