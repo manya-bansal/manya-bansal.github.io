@@ -13,7 +13,7 @@
       <pubDate>Sun, 02 Jan 2000 00:00:00 +0000</pubDate>
       
       <guid>https://manya-bansal.github.io/posts/mosaic/</guid>
-      <description>We introduce Mosaic, a sparse tensor algebra compiler that can bind tensor (sub-)expressions to external functions of other tensor algebra libraries or compilers. Users can extend Mosaic by adding new functions and can bind a sub-computation to a function using a scheduling API. Mosaic substitutes the bound (sub-)expressions with the specified function call and automatically fills in the rest of the unbound code using a default code generator. Mosaic also has a search system that can automatically map an expression to a set of registered external functions.</description>
+      <description>Abstract. We introduce Mosaic, a sparse tensor algebra compiler that can bind tensor (sub-)expressions to external functions of other tensor algebra libraries or compilers. Users can extend Mosaic by adding new functions and can bind a sub-computation to a function using a scheduling API. Mosaic substitutes the bound (sub-)expressions with the specified function call and automatically fills in the rest of the unbound code using a default code generator. Mosaic also has a search system that can automatically map an expression to a set of registered external functions.</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Sat, 01 Jan 2000 00:00:00 +0000</pubDate>
       
       <guid>https://manya-bansal.github.io/posts/kernel-tools/</guid>
-      <description>This paper shows how to use common debugging hardware support for single-step execution to make writing powerful dynamic tools easy &amp;mdash; often a few hundred lines of code. Unlike most current tools, these work well on kernel code. This novel ease makes it correspondingly easy to quickly build novel tools. We present a number of unique tools based on this approach to precisely and immediately find kernel bugs extremely difficult to track down without them.</description>
+      <description>Abstract. This paper shows how to use common debugging hardware support for single-step execution to make writing powerful dynamic tools easy &amp;mdash; often a few hundred lines of code. Unlike most current tools, these work well on kernel code. This novel ease makes it correspondingly easy to quickly build novel tools. We present a number of unique tools based on this approach to precisely and immediately find kernel bugs extremely difficult to track down without them.</description>
     </item>
     
   </channel>

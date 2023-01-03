@@ -7,7 +7,7 @@ authors : ["Manya Bansal,", "Olivia Hsu,", "Kunle Olukotun,", "Fredrik Kjolstad.
 notes : "Under Submission"
 ---
 
-We introduce Mosaic, a sparse tensor algebra compiler that can bind tensor (sub-)expressions to external
+**Abstract.** We introduce Mosaic, a sparse tensor algebra compiler that can bind tensor (sub-)expressions to external
 functions of other tensor algebra libraries or compilers. Users can extend Mosaic by adding new functions and
 can bind a sub-computation to a function using a scheduling API. Mosaic substitutes the bound
 (sub-)expressions with the specified function call and automatically fills in the rest of the unbound code using

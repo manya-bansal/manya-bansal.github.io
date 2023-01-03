@@ -3,7 +3,6 @@ languageCode = "en-us"
 title = "Manya Bansal"
 publishDir = "docs"
 theme = "hugo-theme-cactus"
-paginate = 2
 
 canonifyurls = true
 [params]
@@ -24,6 +23,30 @@ mainSectionTitle = "Research"
 showAllPostsOnHomePage = true
 showAllPostsArchive = true
 tagsOverview = true # show tags overview by default.
+tocInline = true
+
+# [[menu.main]]
+# name = "Home"
+# url = "/"
+# weight = 1
+
+
+# [[menu.main]]
+# name = "Research"
+# url = "/"
+# weight = 2
+
+# [[menu.main]]
+# name = "Personal"
+# url = "/"
+# weight = 3
+
+# [[menu.main]]
+# name = "Contact"
+# url = "/"
+# weight = 4
+
+
 
 [sitemap]
 ChangeFreq = ""
