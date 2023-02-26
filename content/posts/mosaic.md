@@ -4,7 +4,7 @@ categories:
 date : 2000-01-02
 mathjax : true
 authors : ["Manya Bansal,", "Olivia Hsu,", "Kunle Olukotun,", "Fredrik Kjolstad."]
-notes : "Under Submission"
+notes : "Conditionally accepted to PLDI'23."
 ---
 
 **Abstract.** We introduce Mosaic, a sparse tensor algebra compiler that can bind tensor (sub-)expressions to external
