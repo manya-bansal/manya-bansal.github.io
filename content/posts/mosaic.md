@@ -4,7 +4,7 @@ categories:
 date : 2000-01-02
 mathjax : true
 authors : ["Manya Bansal,", "Olivia Hsu,", "Kunle Olukotun,", "Fredrik Kjolstad."]
-notes : "Conditionally accepted to PLDI'23."
+notes : "ACM SIGPLAN Conference on Programming Language Design and Implementation (to appear) (PLDI), June 2023"
 ---
 
 **Abstract.** We introduce Mosaic, a sparse tensor algebra compiler that can bind tensor (sub-)expressions to external
