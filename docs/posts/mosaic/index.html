@@ -24,7 +24,8 @@ The easiest way to reach me is via email (manya227@stanford.edu).
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta property="og:title" content="Mosaic: An Interoperable Compiler for Tensor Algebra" />
-<meta property="og:description" content="Abstract. We introduce Mosaic, a sparse tensor algebra compiler that can bind tensor (sub-)expressions to external functions of other tensor algebra libraries or compilers. Users can extend Mosaic by adding new functions and can bind a sub-computation to a function using a scheduling API. Mosaic substitutes the bound (sub-)expressions with the specified function call and automatically fills in the rest of the unbound code using a default code generator. Mosaic also has a search system that can automatically map an expression to a set of registered external functions." />
+<meta property="og:description" content="Download PDF
+Abstract. We introduce Mosaic, a sparse tensor algebra compiler that can bind tensor expressions to external functions of other tensor algebra libraries and compilers. Users can extend Mosaic by adding new functions and bind a sub-expression to a function using a scheduling API. Mosaic substitutes the bound sub-expressions with calls to the external functions and automatically generates the remaining code using a default code generator. As the generated code is fused by default, users can productively leverage both fusion and calls to specialized functions within the same compiler." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://manya-bansal.github.io/posts/mosaic/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2000-01-02T00:00:00+00:00" />
@@ -33,7 +34,8 @@ The easiest way to reach me is via email (manya227@stanford.edu).
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Mosaic: An Interoperable Compiler for Tensor Algebra"/>
-<meta name="twitter:description" content="Abstract. We introduce Mosaic, a sparse tensor algebra compiler that can bind tensor (sub-)expressions to external functions of other tensor algebra libraries or compilers. Users can extend Mosaic by adding new functions and can bind a sub-computation to a function using a scheduling API. Mosaic substitutes the bound (sub-)expressions with the specified function call and automatically fills in the rest of the unbound code using a default code generator. Mosaic also has a search system that can automatically map an expression to a set of registered external functions."/>
+<meta name="twitter:description" content="Download PDF
+Abstract. We introduce Mosaic, a sparse tensor algebra compiler that can bind tensor expressions to external functions of other tensor algebra libraries and compilers. Users can extend Mosaic by adding new functions and bind a sub-expression to a function using a scheduling API. Mosaic substitutes the bound sub-expressions with calls to the external functions and automatically generates the remaining code using a default code generator. As the generated code is fused by default, users can productively leverage both fusion and calls to specialized functions within the same compiler."/>
 
   
   
@@ -135,7 +137,7 @@ The easiest way to reach me is via email (manya227@stanford.edu).
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fmanya-bansal.github.io%2fposts%2fmosaic%2f&name=Mosaic%3a%20An%20Interoperable%20Compiler%20for%20Tensor%20Algebra&description=Abstract.%20We%20introduce%20Mosaic%2c%20a%20sparse%20tensor%20algebra%20compiler%20that%20can%20bind%20tensor%20%28sub-%29expressions%20to%20external%20functions%20of%20other%20tensor%20algebra%20libraries%20or%20compilers.%20Users%20can%20extend%20Mosaic%20by%20adding%20new%20functions%20and%20can%20bind%20a%20sub-computation%20to%20a%20function%20using%20a%20scheduling%20API.%20Mosaic%20substitutes%20the%20bound%20%28sub-%29expressions%20with%20the%20specified%20function%20call%20and%20automatically%20fills%20in%20the%20rest%20of%20the%20unbound%20code%20using%20a%20default%20code%20generator.%20Mosaic%20also%20has%20a%20search%20system%20that%20can%20automatically%20map%20an%20expression%20to%20a%20set%20of%20registered%20external%20functions." aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fmanya-bansal.github.io%2fposts%2fmosaic%2f&name=Mosaic%3a%20An%20Interoperable%20Compiler%20for%20Tensor%20Algebra&description=Download%20PDF%0aAbstract.%20We%20introduce%20Mosaic%2c%20a%20sparse%20tensor%20algebra%20compiler%20that%20can%20bind%20tensor%20expressions%20to%20external%20functions%20of%20other%20tensor%20algebra%20libraries%20and%20compilers.%20Users%20can%20extend%20Mosaic%20by%20adding%20new%20functions%20and%20bind%20a%20sub-expression%20to%20a%20function%20using%20a%20scheduling%20API.%20Mosaic%20substitutes%20the%20bound%20sub-expressions%20with%20calls%20to%20the%20external%20functions%20and%20automatically%20generates%20the%20remaining%20code%20using%20a%20default%20code%20generator.%20As%20the%20generated%20code%20is%20fused%20by%20default%2c%20users%20can%20productively%20leverage%20both%20fusion%20and%20calls%20to%20specialized%20functions%20within%20the%20same%20compiler." aria-label="Tumblr">
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
@@ -183,17 +185,9 @@ The easiest way to reach me is via email (manya227@stanford.edu).
     </div>
     
     <div class="content" itemprop="articleBody">
-      <p><strong>Abstract.</strong> We introduce Mosaic, a sparse tensor algebra compiler that can bind tensor (sub-)expressions to external
-functions of other tensor algebra libraries or compilers. Users can extend Mosaic by adding new functions and
-can bind a sub-computation to a function using a scheduling API. Mosaic substitutes the bound
-(sub-)expressions with the specified function call and automatically fills in the rest of the unbound code using
-a default code generator. Mosaic also has a search system that can automatically map an expression to a set
-of registered external functions. Both the explicit binding and automatic search are verified by Mosaic. We
-demonstrate the benefits of our approach by showing that calling hand-written CPU and specialized hardware
-functions can provide speedup of up to 206$\times$ and 173$\times$, respectively, over a homogeneous compiler. Mosaic’s
-external function interface is simple and general. Currently, 38 external functions have been added to Mosaic,
-with each addition averaging 20 lines of C++ code.</p>
-<p><em>Email me (<a href="mailto:manya227@stanford.edu">manya227@stanford.edu</a>) for the pre-print.</em></p>
+      <p><a href="../../papers/mosaic_pldi_camera_ready.pdf">Download PDF</a></p>
+<p><strong>Abstract.</strong>    We introduce Mosaic, a sparse tensor algebra compiler that can bind tensor expressions to external functions of other tensor algebra libraries and compilers. Users can extend Mosaic by adding new functions and bind a sub-expression to a function using a scheduling API. Mosaic substitutes the bound sub-expressions with calls to the external functions and automatically generates the remaining code using a default code generator. As the generated code is fused by default, users can productively leverage both fusion and calls to specialized functions within the same compiler. We demonstrate the benefits of our dual approach by showing that calling hand-written CPU and specialized hardware functions can provide speedups of up to $206\times$ against fused code in some cases, while generating fused code can provide speedups of up to $3.57\times$ against code that calls external functions in other cases.  Mosaic also offers a search system that can automatically map an expression to a set of registered external functions. Both the explicit binding and automatic search are verified by Mosaic. Additionally, the interface for adding new external functions is simple and general. Currently, 38 external functions have been added to Mosaic, with each addition averaging 20 lines of code.</p>
+<p><strong>(Distinguished Paper Award, PLDI'23)</strong></p>
 
     </div>
   </article>
@@ -261,7 +255,7 @@ with each addition averaging 20 lines of C++ code.</p>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fmanya-bansal.github.io%2fposts%2fmosaic%2f&name=Mosaic%3a%20An%20Interoperable%20Compiler%20for%20Tensor%20Algebra&description=Abstract.%20We%20introduce%20Mosaic%2c%20a%20sparse%20tensor%20algebra%20compiler%20that%20can%20bind%20tensor%20%28sub-%29expressions%20to%20external%20functions%20of%20other%20tensor%20algebra%20libraries%20or%20compilers.%20Users%20can%20extend%20Mosaic%20by%20adding%20new%20functions%20and%20can%20bind%20a%20sub-computation%20to%20a%20function%20using%20a%20scheduling%20API.%20Mosaic%20substitutes%20the%20bound%20%28sub-%29expressions%20with%20the%20specified%20function%20call%20and%20automatically%20fills%20in%20the%20rest%20of%20the%20unbound%20code%20using%20a%20default%20code%20generator.%20Mosaic%20also%20has%20a%20search%20system%20that%20can%20automatically%20map%20an%20expression%20to%20a%20set%20of%20registered%20external%20functions." aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fmanya-bansal.github.io%2fposts%2fmosaic%2f&name=Mosaic%3a%20An%20Interoperable%20Compiler%20for%20Tensor%20Algebra&description=Download%20PDF%0aAbstract.%20We%20introduce%20Mosaic%2c%20a%20sparse%20tensor%20algebra%20compiler%20that%20can%20bind%20tensor%20expressions%20to%20external%20functions%20of%20other%20tensor%20algebra%20libraries%20and%20compilers.%20Users%20can%20extend%20Mosaic%20by%20adding%20new%20functions%20and%20bind%20a%20sub-expression%20to%20a%20function%20using%20a%20scheduling%20API.%20Mosaic%20substitutes%20the%20bound%20sub-expressions%20with%20calls%20to%20the%20external%20functions%20and%20automatically%20generates%20the%20remaining%20code%20using%20a%20default%20code%20generator.%20As%20the%20generated%20code%20is%20fused%20by%20default%2c%20users%20can%20productively%20leverage%20both%20fusion%20and%20calls%20to%20specialized%20functions%20within%20the%20same%20compiler." aria-label="Tumblr">
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
