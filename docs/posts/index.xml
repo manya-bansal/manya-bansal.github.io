@@ -13,7 +13,7 @@
       <pubDate>Sun, 02 Jan 2000 00:00:00 +0000</pubDate>
       
       <guid>https://manya-bansal.github.io/posts/mosaic/</guid>
-      <description>Download PDF
+      <description>View PDF
 Abstract. We introduce Mosaic, a sparse tensor algebra compiler that can bind tensor expressions to external functions of other tensor algebra libraries and compilers. Users can extend Mosaic by adding new functions and bind a sub-expression to a function using a scheduling API. Mosaic substitutes the bound sub-expressions with calls to the external functions and automatically generates the remaining code using a default code generator. As the generated code is fused by default, users can productively leverage both fusion and calls to specialized functions within the same compiler.</description>
     </item>
     
