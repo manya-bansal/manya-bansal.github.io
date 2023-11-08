@@ -6,14 +6,16 @@ theme = "hugo-theme-cactus"
 
 canonifyurls = true
 [params]
-description = """I am an undergraduate student studying Mathematics at Stanford University. Somewhere along the way, 
-I took a computer science class and became a permanent resident of the systems community. 
+description = """ I am a computer science PhD student at MIT. I am advised by 
+[Saman Amarasinghe](https://groups.csail.mit.edu/commit/) and [Jonathan Ragan-Kelley](https://people.csail.mit.edu/jrk/).
+I am generally interested in designing extensible and productive languages (and tools!) 
+for heterogeneous systems. 
 
-I am generally interested 
-in designing extensible and productive languages (and tools!) for heterogeneous systems. 
-At Stanford, I have been fortunate to work with [Fredrik Kjolstad](http://fredrikbk.com/) and [Dawson Engler](https://web.stanford.edu/~engler/).
+I was previosuly an undergraduate at Stanford Univeristy studying Mathematics. At Stanford, I was incredibly fortunate to work 
+with [Fredrik Kjolstad](http://fredrikbk.com/) and [Dawson Engler](https://web.stanford.edu/~engler/).
 
-The easiest way to reach me is via email (manya227@stanford.edu).
+
+The easiest way to reach me is via email (manya227@mit.edu).
 """
 authorlocation = "authorlocation"
 cover = "images/cover.png"
