@@ -2,62 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://manya-bansal.github.io/</loc>
+    <loc>/</loc>
     <lastmod>2025-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://manya-bansal.github.io/talks/mit-visual-computing/</loc>
+    <loc>/talks/mit-visual-computing/</loc>
     <lastmod>2025-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://manya-bansal.github.io/personal/</loc>
+    <loc>/personal/</loc>
     <lastmod>2025-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://manya-bansal.github.io/poster/</loc>
+    <loc>/poster/</loc>
     <lastmod>2025-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://manya-bansal.github.io/publications/</loc>
+    <loc>/publications/</loc>
     <lastmod>2025-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://manya-bansal.github.io/talks/</loc>
+    <loc>/talks/</loc>
     <lastmod>2025-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://manya-bansal.github.io/teaching/</loc>
+    <loc>/teaching/</loc>
     <lastmod>2025-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://manya-bansal.github.io/posters/</loc>
+    <loc>/posters/</loc>
     <lastmod>2024-10-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://manya-bansal.github.io/posters/debug-hardware-checkers/</loc>
+    <loc>/posters/debug-hardware-checkers/</loc>
     <lastmod>2024-10-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://manya-bansal.github.io/talks/cppcon/</loc>
+    <loc>/talks/cppcon/</loc>
     <lastmod>2024-09-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://manya-bansal.github.io/publications/lightweight-composition/</loc>
+    <loc>/publications/lightweight-composition/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://manya-bansal.github.io/talks/google-ml-compiler/</loc>
+    <loc>/talks/google-ml-compiler/</loc>
     <lastmod>2023-09-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://manya-bansal.github.io/publications/mosaic/</loc>
+    <loc>/publications/mosaic/</loc>
     <lastmod>2023-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://manya-bansal.github.io/talks/pldi23-distinguished/</loc>
+    <loc>/talks/pldi23-distinguished/</loc>
     <lastmod>2023-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://manya-bansal.github.io/talks/stanford-research-lunch/</loc>
+    <loc>/talks/stanford-research-lunch/</loc>
     <lastmod>2023-05-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://manya-bansal.github.io/talks/stanford-ppl/</loc>
+    <loc>/talks/stanford-ppl/</loc>
     <lastmod>2023-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://manya-bansal.github.io/talks/aha-agile-hardware/</loc>
+    <loc>/talks/aha-agile-hardware/</loc>
     <lastmod>2023-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://manya-bansal.github.io/talks/nvidia-tutorial/</loc>
+    <loc>/talks/nvidia-tutorial/</loc>
     <lastmod>2022-11-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://manya-bansal.github.io/categories/</loc>
+    <loc>/categories/</loc>
   </url><url>
-    <loc>https://manya-bansal.github.io/tags/</loc>
+    <loc>/tags/</loc>
   </url>
 </urlset>

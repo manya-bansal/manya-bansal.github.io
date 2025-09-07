@@ -2,123 +2,123 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Manya Bansal</title>
-    <link>https://manya-bansal.github.io/</link>
+    <link>/</link>
     <description>Recent content on Manya Bansal</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>Manya Bansal</copyright>
     <lastBuildDate>Sat, 01 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://manya-bansal.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MIT Visual Computing Seminar</title>
-      <link>https://manya-bansal.github.io/talks/mit-visual-computing/</link>
+      <link>/talks/mit-visual-computing/</link>
       <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://manya-bansal.github.io/talks/mit-visual-computing/</guid>
+      <guid>/talks/mit-visual-computing/</guid>
       <description></description>
     </item>
     <item>
       <title>Personal</title>
-      <link>https://manya-bansal.github.io/personal/</link>
+      <link>/personal/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://manya-bansal.github.io/personal/</guid>
+      <guid>/personal/</guid>
       <description>&lt;h1 id=&#34;personal&#34;&gt;Personal&lt;/h1&gt;&#xA;&lt;p&gt;Before discovering the joys of computer science research, I was interested in philosophy. I represented India at the &lt;a href=&#34;https://www.philosophy-olympiad.org/&#34;&gt;International Philosophy Olympiad&lt;/a&gt;, winning the silver medal. While I read and discuss philosophy much less than I used to, I am more than happy to subject any unlucky ear to my rehearsed spiels.&lt;/p&gt;&#xA;&lt;p&gt;I also struggle to spell all sorts of words, even ones I use every day, and I spend most of my waking hours listening to music.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Poster</title>
-      <link>https://manya-bansal.github.io/poster/</link>
+      <link>/poster/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://manya-bansal.github.io/poster/</guid>
+      <guid>/poster/</guid>
       <description>&lt;h1 id=&#34;poster&#34;&gt;Poster&lt;/h1&gt;&#xA;&lt;p&gt;This section will showcase my research posters and presentations from conferences and workshops.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Publications</title>
-      <link>https://manya-bansal.github.io/publications/</link>
+      <link>/publications/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://manya-bansal.github.io/publications/</guid>
+      <guid>/publications/</guid>
       <description>&lt;h1 id=&#34;publications&#34;&gt;Publications&lt;/h1&gt;</description>
     </item>
     <item>
       <title>Talks</title>
-      <link>https://manya-bansal.github.io/talks/</link>
+      <link>/talks/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://manya-bansal.github.io/talks/</guid>
+      <guid>/talks/</guid>
       <description>&lt;h1 id=&#34;talks&#34;&gt;Talks&lt;/h1&gt;</description>
     </item>
     <item>
       <title>Teaching</title>
-      <link>https://manya-bansal.github.io/teaching/</link>
+      <link>/teaching/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://manya-bansal.github.io/teaching/</guid>
+      <guid>/teaching/</guid>
       <description>&lt;h1 id=&#34;teaching&#34;&gt;Teaching&lt;/h1&gt;&#xA;&lt;p&gt;I was a course assistant for &lt;a href=&#34;https://github.com/dddrrreee/cs140e-23win/&#34;&gt;CS140E: Operating Systems Design and Implementation&lt;/a&gt; in Winter 2023.&lt;/p&gt;&#xA;&lt;p&gt;I tutored mathematics undergraduates through the &lt;a href=&#34;https://sumo.stanford.edu/tutoring.html&#34;&gt;Stanford University Mathematical Organization&lt;/a&gt; for five math courses at Stanford University: linear algebra, multi-variable calculus, differential equations, applied matrix theory and proof-based matrix theory.&lt;/p&gt;&#xA;&lt;p&gt;I tutored computer science undergraduates for introductory courses at Stanford University through &lt;a href=&#34;https://blackincs.stanford.edu/events-and-programming/black-lair&#34;&gt;Black Lair&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Using Debug Hardware to Build Tiny and Efficient Dynamic Kernel Checkers</title>
-      <link>https://manya-bansal.github.io/posters/debug-hardware-checkers/</link>
+      <link>/posters/debug-hardware-checkers/</link>
       <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://manya-bansal.github.io/posters/debug-hardware-checkers/</guid>
+      <guid>/posters/debug-hardware-checkers/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract.&lt;/strong&gt; [Add the abstract for the debug hardware poster here]&lt;/p&gt;</description>
     </item>
     <item>
       <title>CppCon</title>
-      <link>https://manya-bansal.github.io/talks/cppcon/</link>
+      <link>/talks/cppcon/</link>
       <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://manya-bansal.github.io/talks/cppcon/</guid>
+      <guid>/talks/cppcon/</guid>
       <description></description>
     </item>
     <item>
       <title>Lightweight and Locality-Aware Composition of Black-Box Subroutines</title>
-      <link>https://manya-bansal.github.io/publications/lightweight-composition/</link>
+      <link>/publications/lightweight-composition/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://manya-bansal.github.io/publications/lightweight-composition/</guid>
+      <guid>/publications/lightweight-composition/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Abstract.&lt;/strong&gt; [Add the abstract for the lightweight composition paper here]&lt;/p&gt;</description>
     </item>
     <item>
       <title>Google ML Compiler Group</title>
-      <link>https://manya-bansal.github.io/talks/google-ml-compiler/</link>
+      <link>/talks/google-ml-compiler/</link>
       <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>https://manya-bansal.github.io/talks/google-ml-compiler/</guid>
+      <guid>/talks/google-ml-compiler/</guid>
       <description></description>
     </item>
     <item>
       <title>Mosaic: An Interoperable Compiler for Tensor Algebra</title>
-      <link>https://manya-bansal.github.io/publications/mosaic/</link>
+      <link>/publications/mosaic/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://manya-bansal.github.io/publications/mosaic/</guid>
+      <guid>/publications/mosaic/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;../../papers/pldi23main-p107-final.pdf&#34;&gt;View PDF&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Abstract.&lt;/strong&gt; We introduce Mosaic, a sparse tensor algebra compiler that can bind tensor expressions to external functions of other tensor algebra libraries and compilers. Users can extend Mosaic by adding new functions and bind a sub-expression to a function using a scheduling API. Mosaic substitutes the bound sub-expressions with calls to the external functions and automatically generates the remaining code using a default code generator. As the generated code is fused by default, users can productively leverage both fusion and calls to specialized functions within the same compiler. We demonstrate the benefits of our dual approach by showing that calling hand-written CPU and specialized hardware functions can provide speedups of up to $206\times$ against fused code in some cases, while generating fused code can provide speedups of up to $3.57\times$ against code that calls external functions in other cases. Mosaic also offers a search system that can automatically map an expression to a set of registered external functions. Both the explicit binding and automatic search are verified by Mosaic. Additionally, the interface for adding new external functions is simple and general. Currently, 38 external functions have been added to Mosaic, with each addition averaging 20 lines of code.&lt;/p&gt;</description>
     </item>
     <item>
       <title>PLDI&#39;23 Distinguished Paper Session</title>
-      <link>https://manya-bansal.github.io/talks/pldi23-distinguished/</link>
+      <link>/talks/pldi23-distinguished/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://manya-bansal.github.io/talks/pldi23-distinguished/</guid>
+      <guid>/talks/pldi23-distinguished/</guid>
       <description></description>
     </item>
     <item>
       <title>Stanford University, Software Research Lunch</title>
-      <link>https://manya-bansal.github.io/talks/stanford-research-lunch/</link>
+      <link>/talks/stanford-research-lunch/</link>
       <pubDate>Wed, 03 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://manya-bansal.github.io/talks/stanford-research-lunch/</guid>
+      <guid>/talks/stanford-research-lunch/</guid>
       <description></description>
     </item>
     <item>
       <title>Stanford Pervasive Parallelism Lab</title>
-      <link>https://manya-bansal.github.io/talks/stanford-ppl/</link>
+      <link>/talks/stanford-ppl/</link>
       <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://manya-bansal.github.io/talks/stanford-ppl/</guid>
+      <guid>/talks/stanford-ppl/</guid>
       <description></description>
     </item>
     <item>
       <title>AHA Agile Hardware Project</title>
-      <link>https://manya-bansal.github.io/talks/aha-agile-hardware/</link>
+      <link>/talks/aha-agile-hardware/</link>
       <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://manya-bansal.github.io/talks/aha-agile-hardware/</guid>
+      <guid>/talks/aha-agile-hardware/</guid>
       <description></description>
     </item>
     <item>
       <title>NVIDIA, Tutorial on sparse tensor algebra compilation</title>
-      <link>https://manya-bansal.github.io/talks/nvidia-tutorial/</link>
+      <link>/talks/nvidia-tutorial/</link>
       <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>https://manya-bansal.github.io/talks/nvidia-tutorial/</guid>
+      <guid>/talks/nvidia-tutorial/</guid>
       <description></description>
     </item>
   </channel>

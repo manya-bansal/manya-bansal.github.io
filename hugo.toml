@@ -1,5 +1,7 @@
-baseURL = "https://manya-bansal.github.io/"
+baseURL = "/"
 languageCode = "en-us"
+relativeURLs = true
+publishDir = "docs"
 title = "Manya Bansal"
 theme = "cactus"
 copyright = "Manya Bansal" # cactus will use title if copyright is not set
