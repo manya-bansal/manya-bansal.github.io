@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posters on Manya Bansal</title>
+    <link>https://example.com/posters/</link>
+    <description>Recent content in Posters on Manya Bansal</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>Manya Bansal</copyright>
+    <lastBuildDate>Tue, 01 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.com/posters/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Debug Hardware to Build Tiny and Efficient Dynamic Kernel Checkers</title>
+      <link>https://example.com/posters/debug-hardware-checkers/</link>
+      <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://example.com/posters/debug-hardware-checkers/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Abstract.&lt;/strong&gt; [Add the abstract for the debug hardware poster here]&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

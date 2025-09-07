@@ -1,0 +1,85 @@
+baseURL = "https://example.com"
+languageCode = "en-us"
+title = "Manya Bansal"
+theme = "cactus"
+copyright = "Manya Bansal" # cactus will use title if copyright is not set
+disqusShortname = "example" # Used when comments is enabled. Cactus will use site title if not set
+# googleAnalytics = "UA-1234-5"
+
+
+
+# summaryLength = 2
+
+# Main menu which appears below site header.
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Publications"
+url = "/#publications"
+weight = 2
+
+[[menu.main]]
+name = "Posters"
+url = "/#posters"
+weight = 3
+
+[[menu.main]]
+name = "Talks"
+url = "/#talks"
+weight = 4
+
+[[menu.main]]
+name = "Teaching"
+url = "/#teaching"
+weight = 5
+
+[[menu.main]]
+name = "Personal"
+url = "/#personal"
+weight = 6
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = true
+    style = "dracula"
+    tabWidth = 4
+
+[params]
+
+  colortheme = "white" # dark, light, white, or classic
+  rss = true # generate rss feed. default value is false
+  googleAnalyticsAsync = true # use asynchronous tracking. Synchronous tracking by default
+  showAllPostsArchive = false # default
+
+  # Home page settings
+  logo = "images/raspberry-pi.png" # Path to your logo
+  profilePicture = "images/my_photo.jpg" # Path to your profile picture
+  description = """ I am a computer science PhD student at MIT. I am advised by 
+[Saman Amarasinghe](https://groups.csail.mit.edu/commit/) and [Jonathan Ragan-Kelley](https://people.csail.mit.edu/jrk/).
+I am interested in designing extensible and productive languages (and tools!) 
+for heterogeneous systems. 
+
+I was previously an undergraduate at Stanford Univeristy studying mathematics (BS'23). At Stanford, I was incredibly fortunate to work 
+with [Fredrik Kjolstad](http://fredrikbk.com/) and [Dawson Engler](https://web.stanford.edu/~engler/).
+
+Email Me: manya227 WHERE csail DOT mit DOT edu 
+"""
+  showAllPostsOnHomePage = true # default
+  postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
+  tagsOverview = true # show tags overview by default.
+  showProjectsList = true # show projects list by default (if projects data file exists).
+
+  mainSection = "home"

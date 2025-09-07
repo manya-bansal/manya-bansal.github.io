@@ -2,17 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://manya-bansal.github.io/</loc>
-    <lastmod>2000-01-02T00:00:00+00:00</lastmod>
+    <loc>https://example.com/</loc>
+    <lastmod>2025-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://manya-bansal.github.io/posts/mosaic/</loc>
-    <lastmod>2000-01-02T00:00:00+00:00</lastmod>
+    <loc>https://example.com/talks/mit-visual-computing/</loc>
+    <lastmod>2025-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://manya-bansal.github.io/posts/</loc>
-    <lastmod>2000-01-02T00:00:00+00:00</lastmod>
+    <loc>https://example.com/personal/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://manya-bansal.github.io/categories/</loc>
+    <loc>https://example.com/poster/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://manya-bansal.github.io/tags/</loc>
+    <loc>https://example.com/publications/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.com/talks/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.com/teaching/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.com/posters/</loc>
+    <lastmod>2024-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.com/posters/debug-hardware-checkers/</loc>
+    <lastmod>2024-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.com/talks/cppcon/</loc>
+    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.com/publications/lightweight-composition/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.com/talks/google-ml-compiler/</loc>
+    <lastmod>2023-09-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.com/publications/mosaic/</loc>
+    <lastmod>2023-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.com/talks/pldi23-distinguished/</loc>
+    <lastmod>2023-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.com/talks/stanford-research-lunch/</loc>
+    <lastmod>2023-05-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.com/talks/stanford-ppl/</loc>
+    <lastmod>2023-05-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.com/talks/aha-agile-hardware/</loc>
+    <lastmod>2023-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.com/talks/nvidia-tutorial/</loc>
+    <lastmod>2022-11-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.com/categories/</loc>
+  </url><url>
+    <loc>https://example.com/tags/</loc>
   </url>
 </urlset>

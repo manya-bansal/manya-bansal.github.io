@@ -1,0 +1,146 @@
+{{ define "main" }}
+<!-- CUSTOM LAYOUT TEST -->
+<section id="about">
+    {{ if .Site.Params.profilePicture }}
+    <div class="profile-section">
+        <div class="profile-picture">
+            <img src="{{ .Site.Params.profilePicture | relURL }}" alt="Profile Picture" class="profile-img" width="96"
+                height="96" loading="lazy" decoding="async">
+        </div>
+        <div class="profile-content">
+            {{ if isset .Site.Params "description" }}
+            {{ .Site.Params.description | $.Page.RenderString }}
+            {{ end }}
+
+            {{ if isset .Site.Params "social" }}
+            <p>Find me on
+                {{ $length := (len .Site.Params.social) }}
+                {{ range $index, $elem := .Site.Params.social }}
+                {{ if eq $elem.name "email" }}
+                <a class="icon" target="_blank" rel="noopener" href="mailto:{{ $elem.link }}" aria-label="Email">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+                {{ else if eq $elem.name "rss" }}
+                <a class="icon" target="_blank" rel="noopener" href="{{ $elem.link }}" aria-label="RSS">
+                    <i class="fas fa-rss" aria-hidden="true"></i>
+                </a>
+                {{ else if eq $elem.name "scholar" }}
+                <a class="icon" target="_blank" rel="noopener" href="{{ $elem.link }}" aria-label="Google Scholar">
+                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                </a>
+                {{ else }}
+                <a class="icon" target="_blank" rel="noopener" href="{{ $elem.link }}" aria-label="{{ $elem.name }}">
+                    <i class="fab fa-{{ lower $elem.name }}" aria-hidden="true"></i>
+                </a>
+                {{ end }}
+
+                {{ if (lt (add $index 2) $length) }}
+                {{- print " , " -}}
+                {{ else if (lt (add $index 1) $length) }}
+                {{- print " and " -}}
+                {{ else }}
+                {{- print "." -}}
+                {{ end }}
+                {{ end }}
+            </p>
+            {{ end }}
+
+            {{ partial "optional-about.html" . }}
+        </div>
+    </div>
+    {{ else }}
+    {{ if isset .Site.Params "description" }}
+    {{ .Site.Params.description | $.Page.RenderString }}
+    {{ end }}
+    {{ if isset .Site.Params "social" }}
+    <p>Find me on
+        {{ $length := (len .Site.Params.social) }}
+        {{ range $index, $elem := .Site.Params.social }}
+        {{ if eq $elem.name "email" }}
+        <a class="icon" target="_blank" rel="noopener" href="mailto:{{ $elem.link }}" aria-label="Email">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+        </a>
+        {{ else if eq $elem.name "rss" }}
+        <a class="icon" target="_blank" rel="noopener" href="{{ $elem.link }}" aria-label="RSS">
+            <i class="fas fa-rss" aria-hidden="true"></i>
+        </a>
+        {{ else if eq $elem.name "scholar" }}
+        <a class="icon" target="_blank" rel="noopener" href="{{ $elem.link }}" aria-label="Google Scholar">
+            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+        </a>
+        {{ else }}
+        <a class="icon" target="_blank" rel="noopener" href="{{ $elem.link }}" aria-label="{{ $elem.name }}">
+            <i class="fab fa-{{ lower $elem.name }}" aria-hidden="true"></i>
+        </a>
+        {{ end }}
+
+        {{ if (lt (add $index 2) $length) }}
+        {{- print " , " -}}
+        {{ else if (lt (add $index 1) $length) }}
+        {{- print " and " -}}
+        {{ else }}
+        {{- print "." -}}
+        {{ end }}
+        {{ end }}
+    </p>
+    {{ end }}
+    {{ partial "optional-about.html" . }}
+    {{ end }}
+</section>
+
+
+<!-- Sections backed by .md files -->
+{{ with .Site.GetPage "publications" }}
+<section id="publications">
+    <span class="h1">Publications</span>
+    {{ range (where (where .Site.RegularPages "Section" "publications") ".Params.draft" "!=" true) }}
+    <div class="publication-item">
+        <p class="paper-title">{{ .Title }}</p>
+        <p class="authors">{{ delimit .Params.authors ", " }}</p>
+        <p class="venue">{{ .Params.notes }}</p>
+        {{ if .Params.award }}<p class="award">{{ .Params.award }}</p>{{ end }}
+        {{ if .Params.pdf_link }}<p class="pdf-link"><a href="{{ .Params.pdf_link }}" target="_blank">View PDF</a></p>{{ end }}
+    </div>
+    {{ end }}
+</section>
+{{ end }}
+{{ with .Site.GetPage "poster" }}
+<section id="posters">
+    <span class="h1">Posters</span>
+    {{ range (where (where .Site.RegularPages "Section" "posters") ".Params.draft" "!=" true) }}
+    <div class="publication-item">
+        <p class="paper-title">{{ .Title }}</p>
+        <p class="authors">{{ delimit .Params.authors ", " }}</p>
+        <p class="venue">{{ .Params.notes }}</p>
+        {{ if .Params.award }}<p class="award">{{ .Params.award }}</p>{{ end }}
+        {{ if .Params.pdf_link }}<p class="pdf-link"><a href="{{ .Params.pdf_link }}" target="_blank">View PDF</a></p>{{ end }}
+    </div>
+    {{ end }}
+</section>
+{{ end }}
+{{ with .Site.GetPage "talks" }}
+<section id="talks">
+    <span class="h1">Talks</span>
+    <ul>
+    {{ range (where (where .Site.RegularPages "Section" "talks") ".Params.draft" "!=" true) }}
+        <li>{{ .Title }} ({{ .Params.notes }})</li>
+    {{ end }}
+    </ul>
+</section>
+{{ end }}
+{{ with .Site.GetPage "teaching" }}
+<section id="teaching">
+    {{ .Content }}
+</section>
+{{ end }}
+{{ with .Site.GetPage "personal" }}
+<section id="personal">
+    {{ .Content }}
+</section>
+{{ end }}
+
+<div class="last-updated">
+    <em>Last updated: {{ now.Format "January 2, 2006" }}</em>
+</div>
+
+{{ end }}
