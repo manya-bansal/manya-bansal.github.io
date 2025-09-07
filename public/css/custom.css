@@ -1,0 +1,204 @@
+/* Profile Picture Styles - OVERRIDE ALL */
+.profile-section {
+    display: flex !important;
+    align-items: center !important;
+    gap: 2rem !important;
+    margin-bottom: 2rem !important;
+}
+
+.profile-picture {
+    flex-shrink: 0 !important;
+}
+
+.profile-img,
+#about img,
+.profile-picture img,
+section img {
+    width: 200px !important;
+    height: 250px !important;
+    border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    object-fit: cover !important;
+    border: 3px solid #e0e0e0 !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    margin-right: 2rem !important;
+    max-width: 200px !important;
+    min-width: 200px !important;
+    max-height: 250px !important;
+    min-height: 250px !important;
+}
+
+.profile-img:hover,
+#about img:hover,
+.profile-picture img:hover,
+section img:hover {
+    transform: none !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.profile-content {
+    flex: 1;
+    min-width: 0;
+    /* Allows text to wrap properly */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .profile-img {
+        width: 320px !important;
+        height: 420px !important;
+        border-radius: 0 !important;
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .profile-content {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-img {
+        width: 280px !important;
+        height: 370px !important;
+        border-radius: 0 !important;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .profile-section {
+        gap: 1rem;
+    }
+}
+
+/* Dark theme adjustments */
+@media (prefers-color-scheme: dark) {
+    .profile-img {
+        border-color: #404040;
+    }
+}
+
+/* Remove hover effects from logo */
+#logo,
+#logo:hover,
+#header #logo,
+#header #logo:hover,
+header #logo,
+header #logo:hover,
+a #logo,
+a #logo:hover,
+header a #logo,
+header a #logo:hover {
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+    transition: none !important;
+    box-shadow: none !important;
+    background-size: cover !important;
+}
+
+/* Publication styling */
+.publication-item {
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+}
+
+.publication-item .paper-title {
+    margin: 0 0 0.1rem 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.publication-item .authors {
+    margin: 0.1rem 0;
+    font-size: 14px;
+    font-style: italic;
+    color: #666;
+}
+
+.publication-item .venue {
+    margin: 0.1rem 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.publication-item .award {
+    margin: 0.1rem 0 0 0;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    color: #2bbc8a;
+}
+
+.publication-item .pdf-link {
+    margin: 0.1rem 0 0 0;
+}
+
+.publication-item .pdf-link a {
+    font-size: 14px;
+    color: #383838;
+    text-decoration: none;
+}
+
+.publication-item .pdf-link a:hover {
+    color: #383838;
+    text-decoration: underline;
+}
+
+/* Talks specific styling - remove bold and reduce spacing */
+#talks .publication-item .paper-title {
+    font-weight: normal;
+}
+
+#talks .publication-item {
+    margin-bottom: 0;
+}
+
+#talks ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Reduce spacing between sections */
+section {
+    margin-bottom: 0.7rem !important;
+    margin-top: 0 !important;
+}
+
+section h1 {
+    margin-bottom: 0.5rem !important;
+    margin-top: 0 !important;
+}
+
+section .h1 {
+    margin-bottom: 0.5rem !important;
+    margin-top: 0 !important;
+}
+
+/* Override theme default spacing */
+.content section {
+    margin-bottom: 0.7rem !important;
+}
+
+#publications, #posters, #talks, #teaching, #personal {
+    margin-bottom: 0.7rem !important;
+    margin-top: 0 !important;
+}
+
+/* Last updated styling */
+.last-updated {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 12px;
+    color: #999;
+}

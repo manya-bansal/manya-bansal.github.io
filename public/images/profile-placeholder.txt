@@ -1,0 +1,9 @@
+This is a placeholder file. To add your profile picture:
+
+1. Add your profile picture as 'profile.jpg' in this directory (/static/images/)
+2. The image should be square (e.g., 400x400px or 500x500px) for best results
+3. Supported formats: JPG, PNG, WebP
+4. The image will be automatically cropped to a circle and resized as needed
+
+The profile picture will appear next to your description on the homepage.
+
