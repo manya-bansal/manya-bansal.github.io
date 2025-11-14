@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>Manya Bansal</copyright>
-    <lastBuildDate>Sat, 01 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Modular GPU Programming with Typed Perspectives</title>
+      <link>/publications/prism/</link>
+      <pubDate>Fri, 14 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>/publications/prism/</guid>
+      <description></description>
+    </item>
     <item>
       <title>MIT Visual Computing Seminar</title>
       <link>/talks/mit-visual-computing/</link>
