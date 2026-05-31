@@ -44,7 +44,7 @@ weight = 6
 [params]
   profilePicture = "images/my_photo_new.png"
   favicon = "images/raspberry-pi.png"
-  description = """I'm a Member of Technical Staff at [humans&](https://humansand.ai/).
+  description = """I'm a member of technical staff at [humans&](https://humansand.ai/).
 
 I'm currently on leave from my Ph.D. program at MIT, where I worked with [Saman Amarasinghe](https://groups.csail.mit.edu/commit/) and [Jonathan Ragan-Kelley](https://people.csail.mit.edu/jrk/) on programming languages for high performance computing.
 
