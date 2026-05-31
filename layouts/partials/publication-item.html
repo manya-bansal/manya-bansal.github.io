@@ -1,0 +1,20 @@
+<article style="margin-bottom: 0.25rem; display: flex; gap: 1.5rem;">
+  <div style="flex-shrink: 0; min-width: 5.5rem; padding-top: 0.15rem; text-align: center;">
+    {{ with .Params.notes }}
+    <span style="font-size: 0.95rem; color: #374151; font-weight: 500;">{{ . }}</span>
+    {{ end }}
+  </div>
+  <div>
+    {{ if .Params.pdf_link }}
+    <p style="font-weight: 500; font-size: 1rem; margin-bottom: 0.1rem;"><a href="{{ .Params.pdf_link }}" target="_blank" rel="noopener">{{ .Title }}</a></p>
+    {{ else }}
+    <p style="font-weight: 500; font-size: 1rem; margin-bottom: 0.1rem;">{{ .Title }}</p>
+    {{ end }}
+    {{ with .Params.authors }}
+    <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 0.1rem; font-style: italic;">{{ delimit . ", " }}</p>
+    {{ end }}
+    {{ with .Params.award }}
+    <p style="font-size: 0.9rem; font-weight: 600; color: #b45309; margin-bottom: 0.1rem;">&#9733; {{ . }}</p>
+    {{ end }}
+  </div>
+</article>

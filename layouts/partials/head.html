@@ -1,48 +1,15 @@
-<head>
-    <link rel="preload" href="{{ "lib/font-awesome/webfonts/fa-brands-400.woff2" | relURL }}" as="font"
-        type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="{{ "lib/font-awesome/webfonts/fa-regular-400.woff2" | relURL }}" as="font"
-        type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="{{ "lib/font-awesome/webfonts/fa-solid-900.woff2" | relURL }}" as="font"
-        type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="{{ "lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" | relURL }}" as="font"
-        type="font/woff2" crossorigin="anonymous">
-    {{ if eq .Site.Params.Comments.enabled true }}
-    <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
-    <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
-    {{ end }}
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ if .IsPage }} {{ .Title }} | {{ end }}{{ .Site.Title }}</title>
-    <link rel='canonical' href='{{ .Permalink }}'>
-    {{ with .Site.Params.description }}
-    <meta name="description" content="{{ . }}">{{ end }}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="all,follow">
-    <meta name="googlebot" content="index,follow,snippet,archive">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{ "images/raspberry-pi.png" | relURL }}">
-    <link rel="shortcut icon" type="image/png" href="{{ "images/raspberry-pi.png" | relURL }}">
-    
-    {{ template "_internal/opengraph.html" . }}
-    {{ template "_internal/twitter_cards.html" . }}
-    {{ .Scratch.Set "colortheme" "white"}}
-    {{ if .Site.Params.Colortheme }}
-    {{ .Scratch.Set "colortheme" .Site.Params.Colortheme }}
-    {{ end }}
-    {{ $colortheme := .Scratch.Get "colortheme" }}
-
-    {{- $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed" "enableSourceMap" "true") -}}
-    {{- $styles := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "scss/style.scss" . | resources.ToCSS
-    $options | resources.Fingerprint "sha512" }}
-    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
-
-    <!-- Custom CSS -->
-    {{ range .Site.Params.css }}
-    <link rel="stylesheet" href="{{ . | relURL }}">
-    {{ end }}
-
-    <!-- Profile Picture Custom CSS -->
-    <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
-</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsPage }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+{{ with .Site.Params.favicon }}
+<link rel="icon" type="image/png" href="{{ . | relURL }}">
+{{ end }}
+{{ $css := resources.Get "css/main.css" }}
+{{ $css = $css | css.PostCSS }}
+{{ if hugo.IsProduction }}
+  {{ $css = $css | minify | fingerprint }}
+{{ end }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">

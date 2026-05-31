@@ -4,7 +4,7 @@ categories:
 date: 2023-06-01
 mathjax: true
 authors: ["Manya Bansal", "Olivia Hsu", "Kunle Olukotun", "Fredrik Kjolstad"]
-notes: "ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI), June 2023"
+notes: "PLDI'23"
 award: "Distinguished Paper Award"
 pdf_link: "https://dl.acm.org/doi/10.1145/3591236"
 draft: false

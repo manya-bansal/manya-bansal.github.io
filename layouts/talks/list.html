@@ -1,0 +1,14 @@
+{{ define "main" }}
+<h1 class="text-2xl font-semibold mb-2">Talks</h1>
+<p class="text-sm text-neutral-500 mb-8">Selected talks and presentations.</p>
+<hr class="border-neutral-200 mb-8">
+
+<ul class="list-none p-0 m-0 space-y-4">
+{{ range where .Pages ".Params.draft" "!=" true }}
+  <li>
+    <p class="font-medium text-base mb-0">{{ .Title }}</p>
+    <p class="text-sm text-neutral-500">{{ .Params.notes }}</p>
+  </li>
+{{ end }}
+</ul>
+{{ end }}

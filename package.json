@@ -1,0 +1,16 @@
+{
+  "name": "manya-bansal-website",
+  "private": true,
+  "scripts": {
+    "dev": "hugo server",
+    "build": "hugo --minify"
+  },
+  "devDependencies": {
+    "a17t": "^0.5",
+    "autoprefixer": "^10.4",
+    "postcss": "^8.4",
+    "postcss-cli": "^11",
+    "postcss-import": "^16.1.1",
+    "tailwindcss": "^3.4"
+  }
+}

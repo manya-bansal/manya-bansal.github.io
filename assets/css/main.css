@@ -1,0 +1,30 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "a17t/dist/a17t.css";
+@import "tailwindcss/utilities";
+
+.site-container > * {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.site-container {
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3rem 1.5rem;
+}
+
+.bio-text p {
+  margin-bottom: 0.75rem;
+}
+
+.bio-text a,
+.site-container a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+}
