@@ -1,5 +1,5 @@
 ---
-title: "Some things, big and small"
+title: "Selected work"
 layout: "things"
 draft: false
 ---
