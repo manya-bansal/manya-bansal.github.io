@@ -1,2 +1,7 @@
 <header class="mb-6">
+  <nav style="display: flex; gap: 1.25rem; justify-content: flex-end; font-family: 'Inter', sans-serif; font-size: 0.8rem;">
+    {{ $things := site.GetPage "things" }}
+    <a href="{{ site.Home.RelPermalink }}" style="text-decoration: none; color: {{ if .IsHome }}#171717{{ else }}#6b7280{{ end }}; font-weight: {{ if .IsHome }}600{{ else }}400{{ end }};">Home</a>
+    <a href="{{ $things.RelPermalink }}" style="text-decoration: none; color: {{ if eq . $things }}#171717{{ else }}#6b7280{{ end }}; font-weight: {{ if eq . $things }}600{{ else }}400{{ end }};">Selected work</a>
+  </nav>
 </header>

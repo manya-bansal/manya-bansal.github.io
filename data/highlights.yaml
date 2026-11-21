@@ -1,0 +1,32 @@
+# Groups and their items show in this order. Keep items newest first, with philosophy last.
+# An item with `page` takes its title, authors, venue, award and link from that content file.
+- label: "Modeling"
+  color: "#c2410c"
+  tint: "rgba(194, 65, 12, 0.10)"
+  items:
+    - title: "Introducing &Tutor: Training better tutors with better learners"
+      url: "https://tutor.humansand.ai/blog/"
+      authors: "Alexis Ross*, Manya Bansal*, and friends at humans&"
+      footnote: "* Equal contribution"
+      notes: "Oct'26"
+    - title: "Persimmon: a large-scale model that simulates how people behave"
+      url: "https://persimmon.humansand.ai/blog/persimmon.html"
+      authors: "Co-led training, data, and evals"
+      notes: "Sep'26"
+- label: "Systems and Programming Languages"
+  color: "#0f766e"
+  tint: "rgba(15, 118, 110, 0.12)"
+  items:
+    - page: "publications/prism.md"
+    - page: "publications/lightweight-composition.md"
+    - page: "posters/debug-hardware-checkers.md"
+      kind: "Poster"
+    - page: "publications/mosaic.md"
+- label: "Philosophy"
+  color: "#7e4a8c"
+  tint: "rgba(126, 74, 140, 0.11)"
+  items:
+    - title: "Silver medal, International Philosophy Olympiad"
+      url: "https://www.philosophy-olympiad.org/"
+      authors: "Represented India"
+      notes: "IPO'19"

@@ -1,0 +1,31 @@
+  <div>
+  {{ range hugo.Data.highlights }}
+    <div style="display: flex; min-height: 6rem; margin-bottom: 0.9rem;">
+      <div style="flex-shrink: 0; width: 1.9rem; display: flex; align-items: center; justify-content: flex-start;">
+        <span style="writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap; font-family: 'Source Serif 4', Georgia, serif; font-size: 0.85rem; font-weight: 600; color: {{ .color }};">{{ .label }}</span>
+      </div>
+      <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0.35rem 0; background: {{ .tint | safeCSS }}; border-radius: 6px;">
+      {{ range .items }}
+        {{ $title := .title }}{{ $url := .url }}{{ $authors := .authors }}{{ $notes := .notes }}{{ $award := "" }}
+        {{ with .page }}
+          {{ $page := site.GetPage . }}
+          {{ if not $page }}{{ errorf "highlights.yaml: no content file %q" . }}{{ end }}
+          {{ $title = $page.Title }}{{ $url = $page.Params.pdf_link }}{{ $authors = delimit $page.Params.authors ", " }}{{ $notes = $page.Params.notes }}{{ $award = $page.Params.award }}
+        {{ end }}
+        <article style="display: flex; gap: 1rem; padding: 0.55rem 0.9rem 0.55rem 0.3rem;">
+          <div style="flex-shrink: 0; width: 4.8rem; padding-top: 0.15rem; text-align: center;">
+            <span style="font-size: 0.95rem; color: #374151; font-weight: 500;">{{ $notes }}</span>
+            {{ with .kind }}<br><span style="font-size: 0.85rem; color: #6b7280; font-style: italic;">({{ . }})</span>{{ end }}
+          </div>
+          <div>
+            <p style="font-weight: 500; font-size: 1rem; margin-bottom: 0.1rem;">{{ if $url }}<a href="{{ $url }}" target="_blank" rel="noopener">{{ $title }}</a>{{ else }}{{ $title }}{{ end }}</p>
+            {{ with $authors }}<p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 0.1rem; font-style: italic;">{{ . }}</p>{{ end }}
+            {{ with .footnote }}<p style="font-size: 0.8rem; color: #6b7280; margin-bottom: 0.1rem;">{{ . }}</p>{{ end }}
+            {{ with $award }}<p style="font-size: 0.9rem; font-weight: 600; color: #b45309; margin-bottom: 0.1rem;">&#9733; {{ . }}</p>{{ end }}
+          </div>
+        </article>
+      {{ end }}
+      </div>
+    </div>
+  {{ end }}
+  </div>

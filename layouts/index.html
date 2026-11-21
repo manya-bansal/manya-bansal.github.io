@@ -1,18 +1,22 @@
 {{ define "main" }}
-<section style="margin-bottom: 3rem;">
+<section style="margin-bottom: 2.5rem;">
   <h1 style="font-size: 2.25rem; font-weight: 400; color: #171717; margin-bottom: 1rem; font-family: 'Source Serif 4', Georgia, serif;">Manya Bansal</h1>
   {{ with .Site.Params.profilePicture }}
   <img src="{{ . | relURL }}" alt="Profile photo"
        style="width: 150px; height: auto; float: right; margin-left: 1.5rem; margin-bottom: 1rem;">
   {{ end }}
-  <div class="bio-text" style="font-size: 0.95rem; line-height: 1.7; color: #374151; text-align: justify;">
+  <div class="bio-text accent-links" style="font-size: 0.95rem; line-height: 1.7; color: #374151; text-align: justify;">
     {{ .Site.Params.description | $.Page.RenderString }}
   </div>
 </section>
 
+{{ with site.GetPage "things" }}
+<p style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; font-family: 'Inter', sans-serif; margin-bottom: 2.5rem;"><a href="{{ .RelPermalink }}" style="color: #c2410c;">{{ .Title }}</a> <span style="color: #c2410c;">&rarr;</span></p>
+{{ end }}
+
 <section style="margin-bottom: 4rem;">
   <h2 style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #6b7280; font-family: 'Inter', sans-serif; margin-bottom: 1rem;">News</h2>
-  <ul style="list-style: none; padding: 0; margin: 0;">
+  <ul class="accent-links" style="list-style: none; padding: 0; margin: 0;">
     {{ range first 8 (where (where .Site.RegularPages "Section" "news") ".Params.draft" "!=" true) }}
       <li style="display: flex; gap: 0.75rem; font-size: 0.95rem; margin-bottom: 0.25rem;">
         <span style="color: #374151; font-weight: 600; flex-shrink: 0; min-width: 5.5rem;">{{ .Date.Format "Jan 2006" }}</span>
@@ -20,26 +24,6 @@
       </li>
     {{ end }}
   </ul>
-</section>
-
-<section style="margin-bottom: 4rem;">
-  <h2 style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #6b7280; font-family: 'Inter', sans-serif; margin-bottom: 1rem;">Publications</h2>
-  {{ range first 3 (where (where .Site.RegularPages "Section" "publications") ".Params.draft" "!=" true) }}
-    {{ partial "publication-item.html" . }}
-    <div style="margin: 1rem 0;"></div>
-  {{ end }}
-  {{ range (where (where .Site.RegularPages "Section" "posters") ".Params.draft" "!=" true) }}
-    {{ partial "poster-item.html" . }}
-  {{ end }}
-</section>
-
-<section style="margin-bottom: 4rem;">
-  <h2 style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #6b7280; font-family: 'Inter', sans-serif; margin-bottom: 1rem;">Personal</h2>
-  {{ with .Site.GetPage "personal" }}
-  <div class="bio-text" style="font-size: 0.95rem; line-height: 1.7; color: #374151; text-align: justify;">
-    {{ .Content }}
-  </div>
-  {{ end }}
 </section>
 
 {{ end }}

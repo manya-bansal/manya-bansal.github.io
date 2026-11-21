@@ -28,3 +28,9 @@
   text-decoration-style: dotted;
   text-underline-offset: 3px;
 }
+
+/* Accent colour on the underline only, so link text stays as readable as the prose around it. */
+.accent-links a {
+  text-decoration-color: #c2410c;
+  text-decoration-thickness: 1.5px;
+}

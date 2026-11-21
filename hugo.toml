@@ -42,13 +42,11 @@ weight = 6
     startLevel = 2
 
 [params]
-  profilePicture = "images/my_photo_new.png"
+  profilePicture = "images/my_photo_2026.jpg"
   favicon = "images/raspberry-pi.png"
-  description = """I'm a member of technical staff at [humans&](https://humansand.ai/).
+  description = """I'm part of the founding team at [humans&](https://humansand.ai/), where I lead the user modeling team with [Alexis Ross](https://alexisjihyeross.github.io/).
 
-I'm currently on leave from my Ph.D. program at MIT, where I worked with [Saman Amarasinghe](https://groups.csail.mit.edu/commit/) and [Jonathan Ragan-Kelley](https://people.csail.mit.edu/jrk/) on programming languages for high performance computing.
+Before humans&, I was a Ph.D. student at MIT, where I worked with [Saman Amarasinghe](https://groups.csail.mit.edu/commit/) and [Jonathan Ragan-Kelley](https://people.csail.mit.edu/jrk/) on programming languages for high performance computing. My research focused on helping programmers write fast, low-level GPU code that is still modular, reusable, and correct. I believe programming systems should give people precise control over hardware while making that control easier to compose and trust.
 
-My research is about helping programmers write fast, low-level GPU code that is still modular, reusable, and correct. I believe programming systems should give people precise control over hardware while making that control easier to compose and trust.
-
-Before MIT, I was an undergraduate at Stanford, where I studied mathematics and received my B.S. in 2023. At Stanford, I was lucky to work with [Fredrik Kjolstad](http://fredrikbk.com/) and [Dawson Engler](https://web.stanford.edu/~engler/), who let me tinker and build many, many small things.
+I received my B.S. in pure mathematics from Stanford in 2023. There, I was lucky to work with [Fredrik Kjolstad](http://fredrikbk.com/) and [Dawson Engler](https://web.stanford.edu/~engler/), who let me tinker and build many, many small things.
 """
