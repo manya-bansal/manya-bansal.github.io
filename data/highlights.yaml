@@ -19,6 +19,8 @@
   items:
     - page: "publications/prism.md"
     - page: "publications/lightweight-composition.md"
+      callout:
+        text: "During my 2025 internship at Apple, I built a compiler pass based on this work. It shipped in BNNS with macOS 26.4, so it might be running on your Apple device right now!"
     - page: "posters/debug-hardware-checkers.md"
       kind: "Poster"
     - page: "publications/mosaic.md"

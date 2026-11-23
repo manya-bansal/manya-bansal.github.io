@@ -34,3 +34,43 @@
   text-decoration-color: #c2410c;
   text-decoration-thickness: 1.5px;
 }
+
+/* A note on an entry: an inline box on narrow screens, an annotation in the right margin on wide ones. */
+.margin-note {
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 6px;
+  padding: 0.5rem 0.7rem;
+  margin: 0.45rem 0 0.2rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #374151;
+}
+
+@media (min-width: 1240px) {
+  .has-margin-note {
+    position: relative;
+  }
+
+  .margin-note {
+    position: absolute;
+    left: calc(100% + 2rem);
+    top: 0.6rem;
+    width: 13rem;
+    margin: 0;
+    padding: 0 0 0 0.75rem;
+    background: none;
+    border-radius: 0;
+    border-left: 2px solid var(--note-color);
+    font-size: 0.8rem;
+    color: #6b7280;
+  }
+
+  .margin-note::before {
+    content: "";
+    position: absolute;
+    left: -2rem;
+    top: 0.65rem;
+    width: 1.9rem;
+    border-top: 1px dashed var(--note-color);
+  }
+}
